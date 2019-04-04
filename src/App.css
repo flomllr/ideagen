@@ -1,0 +1,54 @@
+* {
+	box-sizing: border-box;
+}
+
+.prodWrapper {
+	width: 500px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.prodTile {
+	width: 50%;
+	float: left;
+	position: relative;
+	padding: 20px;
+}
+
+.prodTile * {
+	position: relative;
+	width: 100%;
+	color: #000;
+	text-decoration: none;
+}
+
+.prodTile img {
+	display: none;
+}
+
+button {
+	width: 50%;
+	float: left;
+	height: 30px;
+	color: #fff;
+	border: 0px solid transparent;
+	background-color: #eee;
+	color: #000;
+}
+
+.btn-primary {
+	background-color: #ff4000;
+	color: #fff;
+}
+
+.up {
+	background: transparent !important;
+}
+
+.up:after {
+	content: ' Upvotes';
+}
+
+textarea {
+	width: 100%;
+}
