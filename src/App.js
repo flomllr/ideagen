@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-const apiAddress = 'http://localhost:8888';
+const apiAddress = 'https://ideagenserver.herokuapp.com/';
+const zapierHook =
+	'https://hooks.zapier.com/hooks/catch/4762538/76rbv5/?message=';
 
 class App extends Component {
 	componentDidMount = async () => {
@@ -41,9 +43,7 @@ class App extends Component {
 
 	submit = async () => {
 		const { newIdea } = this.state;
-		const response = await fetch(
-			'https://hooks.zapier.com/hooks/catch/4762538/76rbv5/?message=' + newIdea
-		);
+		await fetch(zapierHook + newIdea);
 		await this.loadProducts();
 		this.setState({ newIdea: '' });
 	};
